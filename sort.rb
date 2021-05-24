@@ -1,16 +1,17 @@
-def bubble_sort(array)
-  array.length.times do
-    for i in 0..array.length - 2
-      if array[i] > array[i + 1]
-        j = array[i + 1]
-        k = array[i]
-        array [i] = j
-        array[i + 1] = k
-      end
-    end
-  end 
-  array     
-end 
+# frozen_string_literal: true
 
-p bubble_sort([3000,4,3,78,2,0,2,96,8,-4,859,75,4,1,-3,-100])
-p bubble_sort([4,3,78,2,0,2])
+def bubble_sort(arr)
+  arr.length.times do
+    (0..arr.length - 2).each do |i|
+      next unless arr[i] > arr[i + 1]
+
+      j = arr[i + 1]
+      k = arr[i]
+      arr [i] = j
+      arr[i + 1] = k
+    end
+  end
+  arr
+end
+p bubble_sort([3000, 4, 3, 78, 2, 0, 2, 96, 8, -4, 859, 75, 4, 1, -3, -100])
+p bubble_sort([4, 3, 78, 2, 0, 2])
